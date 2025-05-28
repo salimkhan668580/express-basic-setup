@@ -1,22 +1,36 @@
 {
-  "name": "express-basic-setup",
-  "version": "1.0.0",
-  "description": "\"A CLI tool to quickly generate a basic Express.js project structure with preconfigured folders like routes, controllers, models, and more.\"",
+  "name": "express-status-responder",
+  "version": "1.0.5",
+  "description": "A lightweight utility for handling HTTP responses and status codes in Express.js applications. Includes a customizable response handler and predefined HTTP status codes.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "dev": "nodemon index.js"
+
+  },
+  "bin": {
+    "create-express-basic": "./bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salimkhan668580/express-basic-setup.git"
+    "url": "git+https://github.com/salimkhan668580/express-status-responder.git"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "fs-extra": "^11.0.0"
   },
   "keywords": [
-    "npm"
+    "cli",
+    "express",
+    "backend",
+    "template",
+    "mongoose",
+    "starter"
   ],
   "author": "salim khan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/salimkhan668580/express-basic-setup/issues"
+    "url": "https://github.com/salimkhan668580/express-status-responder/issues"
   },
-  "homepage": "https://github.com/salimkhan668580/express-basic-setup#readme"
+  "homepage": "https://github.com/salimkhan668580/express-status-responder#readme"
 }
