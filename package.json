@@ -1,0 +1,22 @@
+{
+  "name": "express-basic-setup",
+  "version": "1.0.0",
+  "description": "\"A CLI tool to quickly generate a basic Express.js project structure with preconfigured folders like routes, controllers, models, and more.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salimkhan668580/express-basic-setup.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "salim khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salimkhan668580/express-basic-setup/issues"
+  },
+  "homepage": "https://github.com/salimkhan668580/express-basic-setup#readme"
+}
