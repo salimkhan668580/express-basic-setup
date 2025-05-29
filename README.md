@@ -8,6 +8,7 @@ A lightweight utility for handling HTTP responses and status codes in Express.js
 npm install express-status-responder
 ```
 
+
 ### 🚀Features
 
 ✅ Predefined HTTP status codes for cleaner code
@@ -15,6 +16,8 @@ npm install express-status-responder
 🔁 Reusable response handler to send consistent API responses
 
 ⚡ Works seamlessly with Express.js
+
+✨ Supports async/await style error handling with express-async-handler
 
 
 ### 📚 Usage
@@ -31,6 +34,10 @@ const { statusCode, responseHandler } = require('express-response-helper');
 const app = express();
 
 app.get('/api/hello', (req, res) => {
+
+
+ //for reference=> responseHandler(res,status,messages,statuscode,data)
+
   responseHandler(res, true, 'Hello World!', statusCode.OK, { greeting: 'Hello' });
 });
 
@@ -42,6 +49,20 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 ```
+
+### ⚙️ asyncHandler
+```bash
+const { statusCode, responseHandler,asyncHandler } = require('express-response-helper');
+
+app.get('/api/error', asyncHandler(async (req, res) => {
+  // Your logic here (e.g. throw error, or send error response)
+  responseHandler(res, false, 'Something went wrong', statusCode.INTERNAL_SERVER_ERROR);
+}));
+```
+
+
+
+
 ### 📦 Available HTTP Status Codes
 
 | Constant                          | Code | Description                     |
@@ -68,7 +89,7 @@ app.listen(3000, () => {
 
 ### 💡 Why use this?
 
-- Reduces repetitive code  
+- Reduces repetitive code
 - Keeps status codes consistent  
 - Makes API response format predictable for frontend teams
 

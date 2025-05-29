@@ -1,6 +1,6 @@
 {
   "name": "express-status-responder",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A lightweight utility for handling HTTP responses and status codes in Express.js applications. Includes a customizable response handler and predefined HTTP status codes.",
   "main": "index.js",
   "scripts": {
@@ -20,12 +20,18 @@
     "fs-extra": "^11.0.0"
   },
   "keywords": [
-    "cli",
+"express-responder",
+"express-status-responder",
+  "express-response-handler",
+  "http-status-codes",
+  "http-response-handler",
     "express",
-    "backend",
-    "template",
-    "mongoose",
-    "starter"
+    "express-asyncHandler",
+    "status-codes",
+    "http",
+    "response-handler",
+    "asyncHandler"
+
   ],
   "author": "salim khan",
   "license": "ISC",
