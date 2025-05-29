@@ -26,6 +26,10 @@ const statusCode = {
   GATEWAY_TIMEOUT: 504, // Timeout from upstream server
 };
 
+const asyncHandler = (fn) => (req, res, next) => {
+  Promise.resolve(fn(req, res, next)).catch(next);
+};
+
 function responseHandler(resp, success, msg, status, data) {
   resp.status(status).json({
     success,
@@ -33,8 +37,10 @@ function responseHandler(resp, success, msg, status, data) {
     data: data || null,
   });
 }
+
 // Export both using CommonJS
 module.exports = {
   statusCode,
+  asyncHandler,
   responseHandler
 };
