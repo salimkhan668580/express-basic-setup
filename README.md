@@ -23,13 +23,13 @@ npm install express-status-responder
 ### 📚 Usage
 
 ```bash
-const { statusCode, responseHandler } = require('express-response-helper');
+const { statusCode, responseHandler } = require('express-status-responder');
 ```
 
 ###  💠Example with Express:
 ```bash
 const express = require('express');
-const { statusCode, responseHandler } = require('express-response-helper');
+const { statusCode, responseHandler } = require('express-status-responder');
 
 const app = express();
 
